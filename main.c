@@ -19,10 +19,10 @@ char bruteForce(char key[]);
 
 int main() {
     
-    char key[MAX] = {"FGHIJKLMNOPQRSTUVWXYZ"};
-/*     FILE *input;
+    char key[MAX]; // = {"FGHIJKLMNOPQRSTUVWXYZ"};
+     FILE *input;
     input = fopen("key.txt", "r");
-    fgets(key, MAX, input); */
+    fgets(key, MAX, input); 
     int offset = 25;
     char code[1024] = {"PHQGIUMEAYLNOFDXJKRCVSTZWB"}; 
 /*    scanf("%[^\n]s ", key);
@@ -40,7 +40,7 @@ int main() {
         printf("the text to be encoded is %s\n", key);
         printf("the length of the string is %d\n", lengthString(key));
         printf("the offset of the cyper is %d\n", offset);
-    decryptCypherSub(key, code);
+    encryptCypherCycle(key, offset);
 }
 
 int lengthString(char key[]) {
@@ -168,17 +168,12 @@ char decryptCypherSub(char key[], char code[]) {
 return 0;
 }
 
+
 /*------------------------------------------------------------------------------*/
 char bruteForce (char key[]) {
     int index;
     int i;
-    
-    
     for (i = 0; i < 26; i++) {
-        
-        
-        
-        
         
         
         
